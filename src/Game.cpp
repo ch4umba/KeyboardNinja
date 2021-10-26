@@ -71,7 +71,7 @@ double Game::goPrint(const string& text)
     for (int i = 1, k = 0;;) {
         for (int j = 1;;) {
             if (k == text.size()) {
-                return;
+                return wtime() - time;
             }
             if (text[k] == '\n') {
                 j = 1;
@@ -85,7 +85,6 @@ double Game::goPrint(const string& text)
             }
         }
     }
-    return wtime() - time;
 }
 
 void Game::printText(const string& printText)
