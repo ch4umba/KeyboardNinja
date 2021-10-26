@@ -337,18 +337,16 @@ Game.h
 /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.h
 
 /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.h
-iostream
--
 Texts.h
 /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.h
-termios.h
+iostream
 -
 sys/ioctl.h
 -
-
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.cpp
-Texts.h
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.h
+sys/time.h
+-
+termios.h
+-
 
 /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.h
 fstream

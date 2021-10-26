@@ -8,6 +8,7 @@
 #include "Texts.h"
 #include <iostream>
 #include <sys/ioctl.h>
+#include <sys/time.h>
 #include <termios.h>
 
 class Game {
@@ -18,7 +19,16 @@ public:
     Game();
     bool checkAlpha(const char&, const char&);
     int getch();
-    void menu();
+    void showMenu();
+    void showSettings();
+    void start();
+    static int setBGColor(int);
+    static int setFGColor(int);
+    static int clrscr();
+    static int gotoXY(int, int);
+    void printText(const string& printText);
+    double goPrint(const string&);
+    static double wtime();
 };
 
 #endif

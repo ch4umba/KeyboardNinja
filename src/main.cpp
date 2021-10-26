@@ -4,7 +4,7 @@
 int main()
 {
     srand(time(NULL));
-    Texts t("text.txt");
     Game game;
+    game.start();
     return 0;
 }
