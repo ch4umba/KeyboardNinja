@@ -61,7 +61,8 @@ void Game::start()
     texts.setTextToWrite(text);
     cout << text;
     double time = goPrint(text);
-    int symbolsPerMinute = static_cast<int>((text.size() - (text.size() / count)) / time * 60);
+    int symbolsPerMinute = static_cast<int>(
+            (text.size() - (text.size() / count)) / time * 60);
 }
 
 double Game::goPrint(const string& text)

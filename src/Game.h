@@ -14,6 +14,7 @@
 class Game {
 private:
     Texts texts;
+
 public:
     Game();
     bool checkAlpha(const char&, const char&);
