@@ -42,7 +42,7 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 all : $(TESTS) bin/program clean
 
 clean :
-	rm -f gtest.a gtest_main.a
+	rm -f gtest.a gtest_main.a *.o
 
 # Builds gtest.a and gtest_main.a.
 
@@ -72,20 +72,20 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-bin/testGameClass : testGameClass.o obj/Game.o obj/Texts.o gtest_main.a
+bin/testGameClass : testGameClass.o Game.o Texts.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o bin/testGameClass
 
-bin/program: obj/main.o obj/Game.o obj/Texts.o
-	g++ -std=gnu++14 -o bin/program obj/main.o obj/Game.o obj/Texts.o
+bin/program: main.o Game.o Texts.o
+	g++ -std=gnu++14 -o bin/program main.o Game.o Texts.o
 
-obj/main.o: src/main.cpp
-	g++ -std=gnu++14 -c -o obj/main.o src/main.cpp
+main.o: src/main.cpp
+	g++ -std=gnu++14 -c -o main.o src/main.cpp
 
-obj/Game.o: src/Game.cpp
-	g++ -std=gnu++14 -c -o obj/Game.o src/Game.cpp
+Game.o: src/Game.cpp
+	g++ -std=gnu++14 -c -o Game.o src/Game.cpp
 
-obj/Texts.o: src/Texts.cpp
-	g++ -std=gnu++14 -c -o obj/Texts.o src/Texts.cpp
+Texts.o: src/Texts.cpp
+	g++ -std=gnu++14 -c -o Texts.o src/Texts.cpp
 
 testGameClass.o : $(USER_DIR)/testGameClass.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Texts.cpp $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/testGameClass.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Texts.cpp
