@@ -7,10 +7,16 @@
 
 #include <iostream>
 #include "Texts.h"
-#include "Texts.h"
+#include <termios.h>
+#include <sys/ioctl.h>
 
 class Game {
+private:
+    Texts texts;
+public:
     Game();
+    bool checkAlpha(const char&, const char&);
+    int getch();
 };
 
 
