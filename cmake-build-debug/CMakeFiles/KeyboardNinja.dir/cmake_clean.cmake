@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/KeyboardNinja.dir/Game.cpp.o"
-  "CMakeFiles/KeyboardNinja.dir/Texts.cpp.o"
-  "CMakeFiles/KeyboardNinja.dir/main.cpp.o"
+  "CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o"
+  "CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o"
+  "CMakeFiles/KeyboardNinja.dir/src/main.cpp.o"
   "KeyboardNinja.exe"
   "KeyboardNinja.pdb"
   "libKeyboardNinja.dll.a"

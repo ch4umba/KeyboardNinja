@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.h
 iostream
 -
 Texts.h
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.h
 termios.h
 -
 sys/ioctl.h
 -
 
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.h
 fstream
 -
 string
@@ -24,9 +24,9 @@ string
 vector
 -
 
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/main.cpp
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/main.cpp
 Game.h
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.h
 ctime
 -
 

@@ -5,16 +5,11 @@
 #include "gtest/gtest.h"
 #include "../src/Game.h"
 
-TEST(GameIsWin, isWin) {
-    ASSERT_EQ(Game::isWin("champion"), true);
-    ASSERT_EQ(Game::isWin("ch_mpion"), false);
-    ASSERT_EQ(Game::isWin("______"), false);
-}
-
-TEST(GameCheckWord, checkWord) {
+TEST(GameCheckAlpha, checkAlpha) {
     Game game;
-    game.setWord("SPORT");
-    ASSERT_EQ(game.checkWord(25, 18), true);
-    ASSERT_EQ(game.checkWord(29, 18), false);
+    char ourAlpha = 't';
+    ASSERT_EQ(game.checkAlpha('T', ourAlpha), true);
+    ASSERT_EQ(game.checkAlpha('t', ourAlpha), true);
+    ASSERT_EQ(game.checkAlpha('k', ourAlpha), false);
 }
 

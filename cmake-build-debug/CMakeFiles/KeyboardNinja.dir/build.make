@@ -66,57 +66,57 @@ include CMakeFiles/KeyboardNinja.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/KeyboardNinja.dir/flags.make
 
-CMakeFiles/KeyboardNinja.dir/main.cpp.o: CMakeFiles/KeyboardNinja.dir/flags.make
-CMakeFiles/KeyboardNinja.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/KeyboardNinja.dir/main.cpp.o"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KeyboardNinja.dir/main.cpp.o -c /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/main.cpp
+CMakeFiles/KeyboardNinja.dir/src/main.cpp.o: CMakeFiles/KeyboardNinja.dir/flags.make
+CMakeFiles/KeyboardNinja.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/KeyboardNinja.dir/src/main.cpp.o"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KeyboardNinja.dir/src/main.cpp.o -c /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/main.cpp
 
-CMakeFiles/KeyboardNinja.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KeyboardNinja.dir/main.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/main.cpp > CMakeFiles/KeyboardNinja.dir/main.cpp.i
+CMakeFiles/KeyboardNinja.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KeyboardNinja.dir/src/main.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/main.cpp > CMakeFiles/KeyboardNinja.dir/src/main.cpp.i
 
-CMakeFiles/KeyboardNinja.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KeyboardNinja.dir/main.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/main.cpp -o CMakeFiles/KeyboardNinja.dir/main.cpp.s
+CMakeFiles/KeyboardNinja.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KeyboardNinja.dir/src/main.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/main.cpp -o CMakeFiles/KeyboardNinja.dir/src/main.cpp.s
 
-CMakeFiles/KeyboardNinja.dir/Texts.cpp.o: CMakeFiles/KeyboardNinja.dir/flags.make
-CMakeFiles/KeyboardNinja.dir/Texts.cpp.o: ../Texts.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KeyboardNinja.dir/Texts.cpp.o"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KeyboardNinja.dir/Texts.cpp.o -c /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.cpp
+CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o: CMakeFiles/KeyboardNinja.dir/flags.make
+CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o: ../src/Texts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o -c /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.cpp
 
-CMakeFiles/KeyboardNinja.dir/Texts.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KeyboardNinja.dir/Texts.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.cpp > CMakeFiles/KeyboardNinja.dir/Texts.cpp.i
+CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.cpp > CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.i
 
-CMakeFiles/KeyboardNinja.dir/Texts.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KeyboardNinja.dir/Texts.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.cpp -o CMakeFiles/KeyboardNinja.dir/Texts.cpp.s
+CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.cpp -o CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.s
 
-CMakeFiles/KeyboardNinja.dir/Game.cpp.o: CMakeFiles/KeyboardNinja.dir/flags.make
-CMakeFiles/KeyboardNinja.dir/Game.cpp.o: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KeyboardNinja.dir/Game.cpp.o"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KeyboardNinja.dir/Game.cpp.o -c /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.cpp
+CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o: CMakeFiles/KeyboardNinja.dir/flags.make
+CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o: ../src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o -c /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.cpp
 
-CMakeFiles/KeyboardNinja.dir/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KeyboardNinja.dir/Game.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.cpp > CMakeFiles/KeyboardNinja.dir/Game.cpp.i
+CMakeFiles/KeyboardNinja.dir/src/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KeyboardNinja.dir/src/Game.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.cpp > CMakeFiles/KeyboardNinja.dir/src/Game.cpp.i
 
-CMakeFiles/KeyboardNinja.dir/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KeyboardNinja.dir/Game.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.cpp -o CMakeFiles/KeyboardNinja.dir/Game.cpp.s
+CMakeFiles/KeyboardNinja.dir/src/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KeyboardNinja.dir/src/Game.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.cpp -o CMakeFiles/KeyboardNinja.dir/src/Game.cpp.s
 
 # Object files for target KeyboardNinja
 KeyboardNinja_OBJECTS = \
-"CMakeFiles/KeyboardNinja.dir/main.cpp.o" \
-"CMakeFiles/KeyboardNinja.dir/Texts.cpp.o" \
-"CMakeFiles/KeyboardNinja.dir/Game.cpp.o"
+"CMakeFiles/KeyboardNinja.dir/src/main.cpp.o" \
+"CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o" \
+"CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o"
 
 # External object files for target KeyboardNinja
 KeyboardNinja_EXTERNAL_OBJECTS =
 
-KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/main.cpp.o
-KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/Texts.cpp.o
-KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/Game.cpp.o
+KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/src/main.cpp.o
+KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o
+KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o
 KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/build.make
 KeyboardNinja.exe: CMakeFiles/KeyboardNinja.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable KeyboardNinja.exe"

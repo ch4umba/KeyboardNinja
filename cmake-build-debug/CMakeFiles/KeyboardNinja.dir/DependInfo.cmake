@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.cpp" "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles/KeyboardNinja.dir/Game.cpp.o"
-  "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.cpp" "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles/KeyboardNinja.dir/Texts.cpp.o"
-  "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/main.cpp" "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles/KeyboardNinja.dir/main.cpp.o"
+  "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.cpp" "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles/KeyboardNinja.dir/src/Game.cpp.o"
+  "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.cpp" "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles/KeyboardNinja.dir/src/Texts.cpp.o"
+  "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/main.cpp" "/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/cmake-build-debug/CMakeFiles/KeyboardNinja.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
