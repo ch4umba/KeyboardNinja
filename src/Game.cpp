@@ -4,9 +4,12 @@
 
 #include "Game.h"
 
-Game::Game() { }
+Game::Game()
+{
+}
 
-int Game::getch(void) {
+int Game::getch(void)
+{
     struct termios oldattr, newattr;
     int ch;
     tcgetattr(0, &oldattr);
@@ -18,9 +21,11 @@ int Game::getch(void) {
     return (ch);
 }
 
-bool Game::checkAlpha(const char& correctAlpha, const char& inAlpha) {
+bool Game::checkAlpha(const char& correctAlpha, const char& inAlpha)
+{
     return tolower(correctAlpha) == inAlpha;
 }
 
-
-
+void Game::menu()
+{
+}

@@ -9,12 +9,12 @@
 #include <string>
 #include <vector>
 
-
 using namespace std;
 
 class Texts {
 private:
     vector<string> text;
+
 public:
     Texts();
     Texts(const string&);
@@ -22,5 +22,4 @@ public:
     void setTextToWrite(string&);
 };
 
-
-#endif //KEYBOARDNINJA_TEXTS_H
+#endif // KEYBOARDNINJA_TEXTS_H

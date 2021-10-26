@@ -5,19 +5,20 @@
 #ifndef KEYBOARDNINJA_GAME_H
 #define KEYBOARDNINJA_GAME_H
 
-#include <iostream>
 #include "Texts.h"
-#include <termios.h>
+#include <iostream>
 #include <sys/ioctl.h>
+#include <termios.h>
 
 class Game {
 private:
     Texts texts;
+
 public:
     Game();
     bool checkAlpha(const char&, const char&);
     int getch();
+    void menu();
 };
-
 
 #endif
