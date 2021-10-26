@@ -42,7 +42,7 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 all : $(TESTS) bin/program clean
 
 clean :
-	rm -f gtest.a gtest_main.a *.o obj/*.o
+	rm -f gtest.a gtest_main.a *.o
 
 # Builds gtest.a and gtest_main.a.
 
