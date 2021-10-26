@@ -37,7 +37,7 @@ void Texts::setTextToWrite(string& textToWrite)
     textToWrite = text[rand() % text.size()];
     int k = 0;
     for (int i = 0; i != textToWrite.size(); i++, k++) {
-        if (k % 30 == 0 && k != 0) {
+        if (k % count == 0 && k != 0) {
             while (i < textToWrite.size() && textToWrite[i] != ' ') {
                 i++;
                 k++;

@@ -11,6 +11,8 @@
 
 using namespace std;
 
+static int count = 30;
+
 class Texts {
 private:
     vector<string> text;

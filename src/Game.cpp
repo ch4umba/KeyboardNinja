@@ -30,8 +30,9 @@ bool Game::checkAlpha(const char& correctAlpha, const char& inAlpha)
 void Game::showMenu()
 {
     cout << "1. Start" << endl;
-    cout << "2. Settings" << endl;
-    cout << "3. Exit" << endl;
+    cout << "2. Records" << endl;
+    cout << "3. Settings" << endl;
+    cout << "4. Exit" << endl;
 }
 
 void Game::showSettings()
@@ -59,7 +60,8 @@ void Game::start()
     string text;
     texts.setTextToWrite(text);
     cout << text;
-    goPrint(text);
+    double time = goPrint(text);
+    int symbolsPerMinute = static_cast<int>((text.size() - (text.size() / count)) / time * 60);
 }
 
 double Game::goPrint(const string& text)
@@ -90,7 +92,7 @@ double Game::goPrint(const string& text)
 void Game::printText(const string& printText)
 {
     for (int i = 0; i < printText.size(); i++) {
-        if (i % 60 == 0 && i != 0) {
+        if (i % count == 0 && i != 0) {
             while (i < printText.size() && printText[i] != ' ') {
                 cout << printText[i];
                 i++;
