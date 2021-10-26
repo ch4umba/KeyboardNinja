@@ -1,6 +1,6 @@
 #include "Game.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Texts t("text.txt");
     return 0;
 }

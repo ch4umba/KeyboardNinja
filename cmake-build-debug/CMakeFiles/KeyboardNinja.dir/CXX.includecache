@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.cpp
+Game.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.h
+
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.h
+iostream
+-
+Texts.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.h
+Texts.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.h
+
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.cpp
+Texts.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.h
+
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Texts.h
+fstream
+-
+string
+-
+vector
+-
+
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/main.cpp
+Game.h
+/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/Game.h
+

@@ -7,10 +7,15 @@
 
 #include <fstream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class Texts {
+private:
+    vector<string> text;
+    string textToWrite = "";
+public:
     Texts();
     Texts(string file);
 };

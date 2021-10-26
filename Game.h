@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Texts.h"
+#include "Texts.h"
 
 class Game {
     Game();
