@@ -11,7 +11,6 @@
 
 using namespace std;
 
-
 class Texts {
 private:
     vector<string> text;
