@@ -4,9 +4,37 @@
 
 #include "Game.h"
 
+int Game::clrscr()
+{
+    return printf("\E[H\E[J");
+}
+
+int Game::setFGColor(int color)
+{
+    return printf("\E[3%dm", color);
+}
+
+int Game::setBGColor(int color)
+{
+    return printf("\E[4%dm", color);
+}
+
+int Game::gotoXY(int y, int x)
+{
+    return printf("\E[%d;%dH", x, y);
+}
+
+double Game::wtime()
+{
+    struct timeval t;
+    gettimeofday(&t, NULL);
+    return (double)t.tv_sec + (double)t.tv_usec * 1E-6;
+}
+
 Game::Game()
 {
     texts.addText("text.txt");
+    readRecordsFromFile();
 }
 
 int Game::getch(void)
@@ -43,13 +71,6 @@ void Game::showSettings()
     cout << "4. Back" << endl;
 }
 
-double Game::wtime()
-{
-    struct timeval t;
-    gettimeofday(&t, NULL);
-    return (double)t.tv_sec + (double)t.tv_usec * 1E-6;
-}
-
 void Game::start()
 {
     clrscr();
@@ -59,10 +80,17 @@ void Game::start()
 
     string text;
     texts.setTextToWrite(text);
+    setBGColor(7);
+    setFGColor(0);
     cout << text;
     double time = goPrint(text);
     int symbolsPerMinute = static_cast<int>(
-            (text.size() - (text.size() / count)) / time * 60);
+            (text.size() - (text.size() / countOfSymbols)) / time * 60);
+    setBGColor(0);
+    setFGColor(7);
+    clrscr();
+    cout << "Your result:" << symbolsPerMinute << " symbols per minute" << endl;
+    addResult(symbolsPerMinute);
 }
 
 double Game::goPrint(const string& text)
@@ -70,7 +98,11 @@ double Game::goPrint(const string& text)
     double time = wtime();
     gotoXY(0, 0);
     char alpha;
-
+    bool isCorrectAlpha;
+    setBGColor(2);
+    setFGColor(7);
+    cout << text[0];
+    gotoXY(1, 1);
     for (int i = 1, k = 0;;) {
         for (int j = 1;;) {
             if (k == text.size()) {
@@ -80,46 +112,170 @@ double Game::goPrint(const string& text)
                 j = 1;
                 gotoXY(j, ++i);
                 ++k;
+                setBGColor(2);
+                setFGColor(7);
+                cout << text[k];
+                gotoXY(j, i);
             }
             alpha = getch();
-            if (checkAlpha(text[k], alpha)) {
+            isCorrectAlpha = checkAlpha(text[k], alpha);
+
+            if (!isCorrectAlpha) {
+                setBGColor(1);
+                setFGColor(7);
+                cout << text[k];
+                gotoXY(j, i);
+            } else {
+                setBGColor(7);
+                setFGColor(2);
+                cout << text[k];
                 gotoXY(++j, i);
                 ++k;
+                setBGColor(2);
+                setFGColor(7);
+                cout << text[k];
+                gotoXY(j, i);
             }
         }
     }
 }
 
-void Game::printText(const string& printText)
+void Game::menu()
 {
-    for (int i = 0; i < printText.size(); i++) {
-        if (i % count == 0 && i != 0) {
-            while (i < printText.size() && printText[i] != ' ') {
-                cout << printText[i];
-                i++;
-            }
-            cout << endl;
+    int c = 0;
+    while (true) {
+        clrscr();
+        showMenu();
+        cout << ">";
+        cin >> c;
+        switch (c) {
+        case 1:
+            start();
+            break;
+        case 2:
+            showRecords();
+            break;
+        case 3:
+            settings();
+            break;
+        case 4:
+            saveRecordsInFile();
+            return;
+        default:
+            cout << "ERROR!";
+            sleep(1);
         }
-        cout << printText[i];
     }
 }
 
-int Game::clrscr()
+void Game::settings()
 {
-    return printf("\E[H\E[J");
+    int c = 0;
+    int tmp = -1;
+    string file;
+    while (true) {
+        clrscr();
+        showSettings();
+        cout << ">";
+        cin >> c;
+        switch (c) {
+        case 1:
+            cout << "Input filename:";
+            cin >> file;
+            if (texts.addText(file)) {
+                cout << "texts added successfully!";
+            } else {
+                cout << "ERROR!";
+            }
+            sleep(1);
+            break;
+        case 2:
+            texts.removeAllTexts();
+            cout << "All texts are removed!";
+            sleep(1);
+            break;
+        case 3:
+            cout << "Enter the new size symbols in line (20 - 120):";
+            cin >> tmp;
+            if (tmp < 20 || tmp > 120) {
+                cout << "ERROR!";
+                sleep(1);
+                break;
+            }
+            countOfSymbols = tmp;
+            break;
+        case 4:
+            return;
+        default:
+            cout << "ERROR!";
+            sleep(1);
+        }
+    }
 }
 
-int Game::setFGColor(int color)
+bool Game::comparator(pair<int, string>& a, pair<int, string>& b)
 {
-    return printf("\E[3%dm", color);
+    return a.first < b.first;
 }
 
-int Game::setBGColor(int color)
+void Game::addResult(int& symbolsPerMinute)
 {
-    return printf("\E[4%dm", color);
+    cout << "Do you want to save the result? [Y/N]:";
+    char choice;
+    cin >> choice;
+    if (choice == 'Y') {
+        string name;
+        cout << "Your Name:";
+        getline(cin, name);
+        if (results.size() < 10) {
+            results.emplace_back(symbolsPerMinute, name);
+        } else {
+            make_pair(symbolsPerMinute, name) = results[9];
+        }
+        sort(results.begin(), results.end(), comparator);
+    }
 }
 
-int Game::gotoXY(int y, int x)
+void Game::showRecords()
 {
-    return printf("\E[%d;%dH", x, y);
+    clrscr();
+    getch();
+    cout << "Result\t\t\t"
+         << "Name\n";
+    for (int i = 0; i < results.size(); i++) {
+        cout << results[i].first << "\t\t\t" << results[i].second << endl;
+    }
+    cout << "Press any key to continue...";
+    cin.get();
+    clrscr();
+}
+
+void Game::saveRecordsInFile()
+{
+    ofstream fout("records.dat", ios_base::app);
+    if (fout.good()) {
+        for (int i = 0; i < results.size(); i++) {
+            fout << results[i].first << "\t\t\t" << results[i].second << endl;
+        }
+    }
+}
+
+void Game::readRecordsFromFile()
+{
+    int res;
+    string name;
+    ifstream fin("records.dat");
+    if (fin.good()) {
+        while (!fin.eof()) {
+            fin >> res;
+            fin.get();
+            fin.get();
+            fin.get();
+            getline(fin, name);
+            if (name.back() == '\r') {
+                name.pop_back();
+            }
+            results.push_back(make_pair(res, name));
+        }
+    }
 }

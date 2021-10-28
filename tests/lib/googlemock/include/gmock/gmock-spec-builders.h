@@ -843,7 +843,7 @@ class GTEST_API_ ExpectationBase {
     call_count_++;
   }
 
-  // Checks the action count (i.e. the number of WillOnce() and
+  // Checks the action countOfSymbols (i.e. the number of WillOnce() and
   // WillRepeatedly() clauses) against the cardinality if this hasn't
   // been done before.  Prints a warning if there are too many or too
   // few actions.
@@ -909,7 +909,7 @@ class TypedExpectation : public ExpectationBase {
         repeated_action_(DoDefault()) {}
 
   ~TypedExpectation() override {
-    // Check the validity of the action count if it hasn't been done
+    // Check the validity of the action countOfSymbols if it hasn't been done
     // yet (for example, if the expectation was never used).
     CheckActionCountIfNotDone();
     for (UntypedActions::const_iterator it = untyped_actions_.begin();
@@ -1039,7 +1039,7 @@ class TypedExpectation : public ExpectationBase {
     }
 
     // Now that no more action clauses can be specified, we check
-    // whether their count makes sense.
+    // whether their countOfSymbols makes sense.
     CheckActionCountIfNotDone();
     return *this;
   }
@@ -1053,7 +1053,7 @@ class TypedExpectation : public ExpectationBase {
     retires_on_saturation_ = true;
 
     // Now that no more action clauses can be specified, we check
-    // whether their count makes sense.
+    // whether their countOfSymbols makes sense.
     CheckActionCountIfNotDone();
     return *this;
   }
@@ -1107,7 +1107,7 @@ class TypedExpectation : public ExpectationBase {
       GTEST_EXCLUSIVE_LOCK_REQUIRED_(g_gmock_mutex) {
     g_gmock_mutex.AssertHeld();
 
-    // In case the action count wasn't checked when the expectation
+    // In case the action countOfSymbols wasn't checked when the expectation
     // was defined (e.g. if this expectation has no WillRepeatedly()
     // or RetiresOnSaturation() clause), we check it when the
     // expectation is used for the first time.
@@ -1706,7 +1706,7 @@ class FunctionMocker<R(Args...)> final : public UntypedFunctionMockerBase {
     }
 
     // This line must be done before calling GetActionForArguments(),
-    // which will increment the call count for *exp and thus affect
+    // which will increment the call countOfSymbols for *exp and thus affect
     // its saturation status.
     *is_excessive = exp->IsSaturated();
     const Action<F>* action = exp->GetActionForArguments(this, args, what, why);

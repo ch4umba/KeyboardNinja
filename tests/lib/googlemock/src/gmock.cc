@@ -175,7 +175,7 @@ void InitGoogleMockImpl(int* argc, CharType** argv) {
         argv[j] = argv[j + 1];
       }
 
-      // Decrements the argument count.
+      // Decrements the argument countOfSymbols.
       (*argc)--;
 
       // We also need to decrement the iterator as we just removed

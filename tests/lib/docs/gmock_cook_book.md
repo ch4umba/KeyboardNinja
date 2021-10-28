@@ -1117,7 +1117,7 @@ using ::testing::Ge;
 vector<int> v;
 ...
 // How many elements in v are >= 10?
-const int count = count_if(v.begin(), v.end(), Matches(Ge(10)));
+const int countOfSymbols = count_if(v.begin(), v.end(), Matches(Ge(10)));
 ```
 
 Since you can build complex matchers from simpler ones easily using gMock, this
@@ -1410,9 +1410,9 @@ additional argument to specify the array size:
 ```cpp
 using ::testing::ElementsAreArray;
 ...
-  int* const expected_vector3 = new int[count];
+  int* const expected_vector3 = new int[countOfSymbols];
   ... fill expected_vector3 with values ...
-  EXPECT_CALL(mock, Foo(ElementsAreArray(expected_vector3, count)));
+  EXPECT_CALL(mock, Foo(ElementsAreArray(expected_vector3, countOfSymbols)));
 ```
 
 Use `Pair` when comparing maps or other associative containers.
@@ -3232,7 +3232,7 @@ foo_test.cc:15: Mock function call matches EXPECT_CALL(mock, F("a", "b"))...
 Stack trace: ...
 
 foo_test.cc:16: Failure
-Actual function call count doesn't match EXPECT_CALL(mock, F("c", HasSubstr("d")))...
+Actual function call countOfSymbols doesn't match EXPECT_CALL(mock, F("c", HasSubstr("d")))...
          Expected: to be called once
            Actual: never called - unsatisfied and active
 [  FAILED  ] Foo.Bar

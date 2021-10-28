@@ -120,7 +120,7 @@ class GTEST_API_ Cardinality {
   // Describes self to an ostream
   void DescribeTo(::std::ostream* os) const { impl_->DescribeTo(os); }
 
-  // Describes the given actual call count to an ostream.
+  // Describes the given actual call countOfSymbols to an ostream.
   static void DescribeActualCallCountTo(int actual_call_count,
                                         ::std::ostream* os);
 

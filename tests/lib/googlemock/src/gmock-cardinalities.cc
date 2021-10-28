@@ -125,7 +125,7 @@ void BetweenCardinalityImpl::DescribeTo(::std::ostream* os) const {
 
 }  // Unnamed namespace
 
-// Describes the given call count to an ostream.
+// Describes the given call countOfSymbols to an ostream.
 void Cardinality::DescribeActualCallCountTo(int actual_call_count,
                                             ::std::ostream* os) {
   if (actual_call_count > 0) {

@@ -3431,7 +3431,7 @@ class ElementsAreMatcherImpl : public MatcherInterface<Container> {
     }
 
     if (actual_count != count()) {
-      // The element count doesn't match.  If the container is empty,
+      // The element countOfSymbols doesn't match.  If the container is empty,
       // there's no need to explain anything as Google Mock already
       // prints the empty container.  Otherwise we just need to show
       // how many elements there actually are.
@@ -3442,7 +3442,7 @@ class ElementsAreMatcherImpl : public MatcherInterface<Container> {
     }
 
     if (mismatch_found) {
-      // The element count matches, but the exam_pos-th element doesn't match.
+      // The element countOfSymbols matches, but the exam_pos-th element doesn't match.
       if (listener_interested) {
         *listener << "whose element #" << exam_pos << " doesn't match";
         PrintIfNotEmpty(explanations[exam_pos], listener->stream());
@@ -3629,7 +3629,7 @@ class UnorderedElementsAreMatcherImpl
 
     if (match_flags() == UnorderedMatcherRequire::ExactMatch) {
       if (matrix.LhsSize() != matrix.RhsSize()) {
-        // The element count doesn't match.  If the container is empty,
+        // The element countOfSymbols doesn't match.  If the container is empty,
         // there's no need to explain anything as Google Mock already
         // prints the empty container. Otherwise we just need to show
         // how many elements there actually are.
@@ -4120,7 +4120,7 @@ class ArgsMatcher {
 }  // namespace internal
 
 // ElementsAreArray(iterator_first, iterator_last)
-// ElementsAreArray(pointer, count)
+// ElementsAreArray(pointer, countOfSymbols)
 // ElementsAreArray(array)
 // ElementsAreArray(container)
 // ElementsAreArray({ e1, e2, ..., en })
@@ -4128,7 +4128,7 @@ class ArgsMatcher {
 // The ElementsAreArray() functions are like ElementsAre(...), except
 // that they are given a homogeneous sequence rather than taking each
 // element as a function argument. The sequence can be specified as an
-// array, a pointer and count, a vector, an initializer list, or an
+// array, a pointer and countOfSymbols, a vector, an initializer list, or an
 // STL iterator range. In each of these cases, the underlying sequence
 // can be either a sequence of values or a sequence of matchers.
 //
@@ -4167,7 +4167,7 @@ inline auto ElementsAreArray(::std::initializer_list<T> xs)
 }
 
 // UnorderedElementsAreArray(iterator_first, iterator_last)
-// UnorderedElementsAreArray(pointer, count)
+// UnorderedElementsAreArray(pointer, countOfSymbols)
 // UnorderedElementsAreArray(array)
 // UnorderedElementsAreArray(container)
 // UnorderedElementsAreArray({ e1, e2, ..., en })
@@ -4175,7 +4175,7 @@ inline auto ElementsAreArray(::std::initializer_list<T> xs)
 // UnorderedElementsAreArray() verifies that a bijective mapping onto a
 // collection of matchers exists.
 //
-// The matchers can be specified as an array, a pointer and count, a container,
+// The matchers can be specified as an array, a pointer and countOfSymbols, a container,
 // an initializer list, or an STL iterator range. In each of these cases, the
 // underlying matchers can be either values or matchers.
 
@@ -4814,7 +4814,7 @@ inline internal::ContainsMatcher<M> Contains(M matcher) {
 }
 
 // IsSupersetOf(iterator_first, iterator_last)
-// IsSupersetOf(pointer, count)
+// IsSupersetOf(pointer, countOfSymbols)
 // IsSupersetOf(array)
 // IsSupersetOf(container)
 // IsSupersetOf({e1, e2, ..., en})
@@ -4836,7 +4836,7 @@ inline internal::ContainsMatcher<M> Contains(M matcher) {
 // - {1, 2, 3} matches IsSupersetOf(Gt(1), Gt(1)), as 2 matches (the first)
 //   Gt(1) and 3 matches (the second) Gt(1).
 //
-// The matchers can be specified as an array, a pointer and count, a container,
+// The matchers can be specified as an array, a pointer and countOfSymbols, a container,
 // an initializer list, or an STL iterator range. In each of these cases, the
 // underlying matchers can be either values or matchers.
 
@@ -4875,7 +4875,7 @@ inline internal::UnorderedElementsAreArrayMatcher<T> IsSupersetOf(
 }
 
 // IsSubsetOf(iterator_first, iterator_last)
-// IsSubsetOf(pointer, count)
+// IsSubsetOf(pointer, countOfSymbols)
 // IsSubsetOf(array)
 // IsSubsetOf(container)
 // IsSubsetOf({e1, e2, ..., en})
@@ -4893,7 +4893,7 @@ inline internal::UnorderedElementsAreArrayMatcher<T> IsSupersetOf(
 //   match Gt(0). The reason is that different matchers must be used for
 //   elements in different slots of the container.
 //
-// The matchers can be specified as an array, a pointer and count, a container,
+// The matchers can be specified as an array, a pointer and countOfSymbols, a container,
 // an initializer list, or an STL iterator range. In each of these cases, the
 // underlying matchers can be either values or matchers.
 
@@ -5109,7 +5109,7 @@ internal::AnyOfMatcher<typename std::decay<const Args&>::type...> AnyOf(
 }
 
 // AnyOfArray(array)
-// AnyOfArray(pointer, count)
+// AnyOfArray(pointer, countOfSymbols)
 // AnyOfArray(container)
 // AnyOfArray({ e1, e2, ..., en })
 // AnyOfArray(iterator_first, iterator_last)
@@ -5118,7 +5118,7 @@ internal::AnyOfMatcher<typename std::decay<const Args&>::type...> AnyOf(
 // collection of matchers.
 //
 // AllOfArray(array)
-// AllOfArray(pointer, count)
+// AllOfArray(pointer, countOfSymbols)
 // AllOfArray(container)
 // AllOfArray({ e1, e2, ..., en })
 // AllOfArray(iterator_first, iterator_last)
@@ -5126,7 +5126,7 @@ internal::AnyOfMatcher<typename std::decay<const Args&>::type...> AnyOf(
 // AllOfArray() verifies whether a given value matches all members of a
 // collection of matchers.
 //
-// The matchers can be specified as an array, a pointer and count, a container,
+// The matchers can be specified as an array, a pointer and countOfSymbols, a container,
 // an initializer list, or an STL iterator range. In each of these cases, the
 // underlying matchers can be either values or matchers.
 

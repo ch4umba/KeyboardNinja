@@ -566,7 +566,7 @@ class TestProperty {
 };
 
 // The result of a single Test.  This includes a list of
-// TestPartResults, a list of TestProperties, a count of how many
+// TestPartResults, a list of TestProperties, a countOfSymbols of how many
 // death tests there are in the Test, and how much time it took to run
 // the Test.
 //
@@ -662,10 +662,10 @@ class GTEST_API_ TestResult {
   // Adds a test part result to the list.
   void AddTestPartResult(const TestPartResult& test_part_result);
 
-  // Returns the death test count.
+  // Returns the death test countOfSymbols.
   int death_test_count() const { return death_test_count_; }
 
-  // Increments the death test count, returning the new count.
+  // Increments the death test countOfSymbols, returning the new countOfSymbols.
   int increment_death_test_count() { return ++death_test_count_; }
 
   // Clears the test part results.
@@ -682,7 +682,7 @@ class GTEST_API_ TestResult {
   std::vector<TestPartResult> test_part_results_;
   // The vector of TestProperties
   std::vector<TestProperty> test_properties_;
-  // Running count of death tests.
+  // Running countOfSymbols of death tests.
   int death_test_count_;
   // The start time, in milliseconds since UNIX Epoch.
   TimeInMillis start_timestamp_;

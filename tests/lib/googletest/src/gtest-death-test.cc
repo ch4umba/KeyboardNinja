@@ -368,7 +368,7 @@ static void FailFromInternalError(int fd) {
   }
 }
 
-// Death test constructor.  Increments the running death test count
+// Death test constructor.  Increments the running death test countOfSymbols
 // for the current test.
 DeathTest::DeathTest() {
   TestInfo* const info = GetUnitTestImpl()->current_test_info();
@@ -639,7 +639,7 @@ bool DeathTestImpl::Passed(bool status_ok) {
 // 3. The child acquires the write end of the pipe and signals the parent
 //    using a Windows event.
 // 4. Now the parent can release the write end of the pipe on its side. If
-//    this is done before step 3, the object's reference count goes down to
+//    this is done before step 3, the object's reference countOfSymbols goes down to
 //    0 and it is destroyed, preventing the child from acquiring it. The
 //    parent now has to release it, or read operations on the read end of
 //    the pipe will not return when the child terminates.
@@ -1470,7 +1470,7 @@ bool DefaultDeathTestFactory::Create(const char* statement,
   if (flag != nullptr) {
     if (death_test_index > flag->index()) {
       DeathTest::set_last_death_test_message(
-          "Death test count (" + StreamableToString(death_test_index)
+          "Death test countOfSymbols (" + StreamableToString(death_test_index)
           + ") somehow exceeded expected maximum ("
           + StreamableToString(flag->index()) + ")");
       return false;

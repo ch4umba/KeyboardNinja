@@ -166,7 +166,7 @@ void ExpectationBase::FindUnsatisfiedPrerequisites(ExpectationSet* result) const
       const ExpectationBase* next = it->expectation_base().get();
 
       if (next->IsSatisfied()) {
-        // If *it is satisfied and has a call count of 0, some of its
+        // If *it is satisfied and has a call countOfSymbols of 0, some of its
         // pre-requisites may not be satisfied yet.
         if (next->call_count_ == 0) {
           expectations.push_back(next);
@@ -202,7 +202,7 @@ void ExpectationBase::DescribeCallCountTo(::std::ostream* os) const
       << (is_retired() ? "retired" : "active");
 }
 
-// Checks the action count (i.e. the number of WillOnce() and
+// Checks the action countOfSymbols (i.e. the number of WillOnce() and
 // WillRepeatedly() clauses) against the cardinality if this hasn't
 // been done before.  Prints a warning if there are too many or too
 // few actions.
@@ -220,7 +220,7 @@ void ExpectationBase::CheckActionCountIfNotDone() const
   if (should_check) {
     if (!cardinality_specified_) {
       // The cardinality was inferred - no need to check the action
-      // count against it.
+      // countOfSymbols against it.
       return;
     }
 
@@ -538,7 +538,7 @@ bool UntypedFunctionMockerBase::VerifyAndClearExpectationsLocked()
     } else if (!untyped_expectation->IsSatisfied()) {
       expectations_met = false;
       ::std::stringstream ss;
-      ss  << "Actual function call count doesn't match "
+      ss  << "Actual function call countOfSymbols doesn't match "
           << untyped_expectation->source_text() << "...\n";
       // No need to show the source file location of the expectation
       // in the description, as the Expect() call that follows already

@@ -824,7 +824,7 @@ class TypeParameterizedTestSuite<Fixture, internal::None, Types> {
 // The maximum number of stack frames to be included is specified by
 // the gtest_stack_trace_depth flag.  The skip_count parameter
 // specifies the number of top frames to be skipped, which doesn't
-// count against the number of frames to be included.
+// countOfSymbols against the number of frames to be included.
 //
 // For example, if Foo() calls Bar(), which in turn calls
 // GetCurrentOsStackTraceExceptTop(..., 1), Foo() will be included in

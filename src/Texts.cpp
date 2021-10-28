@@ -19,7 +19,7 @@ Texts::Texts(const string& file)
     }
 }
 
-void Texts::addText(const string& file)
+bool Texts::addText(const string& file)
 {
     ifstream fin(file);
     if (fin.good()) {
@@ -29,7 +29,9 @@ void Texts::addText(const string& file)
             tmp.pop_back();
             text.push_back(tmp);
         }
+        return true;
     }
+    return false;
 }
 
 void Texts::setTextToWrite(string& textToWrite)
@@ -37,7 +39,7 @@ void Texts::setTextToWrite(string& textToWrite)
     textToWrite = text[rand() % text.size()];
     int k = 0;
     for (int i = 0; i != textToWrite.size(); i++, k++) {
-        if (k % count == 0 && k != 0) {
+        if (k % countOfSymbols == 0 && k != 0) {
             while (i < textToWrite.size() && textToWrite[i] != ' ') {
                 i++;
                 k++;
@@ -46,4 +48,9 @@ void Texts::setTextToWrite(string& textToWrite)
             k = 0;
         }
     }
+}
+
+void Texts::removeAllTexts()
+{
+    text.clear();
 }

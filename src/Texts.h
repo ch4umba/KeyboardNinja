@@ -11,7 +11,7 @@
 
 using namespace std;
 
-static int count = 30;
+static int countOfSymbols = 30;
 
 class Texts {
 private:
@@ -20,8 +20,9 @@ private:
 public:
     Texts();
     Texts(const string&);
-    void addText(const string&);
+    bool addText(const string&);
     void setTextToWrite(string&);
+    void removeAllTexts();
 };
 
 #endif // KEYBOARDNINJA_TEXTS_H

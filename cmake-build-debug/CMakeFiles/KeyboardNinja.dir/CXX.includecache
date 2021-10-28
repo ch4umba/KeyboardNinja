@@ -13,6 +13,8 @@ Game.h
 /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.h
 Texts.h
 /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.h
+algorithm
+-
 iostream
 -
 sys/ioctl.h
@@ -21,6 +23,8 @@ sys/time.h
 -
 termios.h
 -
+unistd.h
+-
 
 /cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Texts.h
 fstream
@@ -28,11 +32,5 @@ fstream
 string
 -
 vector
--
-
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/main.cpp
-Game.h
-/cygdrive/c/Users/cool8/Desktop/KeyboardNinja/src/Game.h
-ctime
 -
 

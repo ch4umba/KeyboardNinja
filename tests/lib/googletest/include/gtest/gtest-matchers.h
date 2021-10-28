@@ -151,7 +151,7 @@ class MatcherInterface : public MatcherDescriberInterface {
   // Not()).
   //
   // For example, a "has at least 10 elements" matcher should explain
-  // what the actual element count is, regardless of the match result,
+  // what the actual element countOfSymbols is, regardless of the match result,
   // as it is useful information to the reader; on the other hand, an
   // "is empty" matcher probably only needs to explain what the actual
   // size is when the match fails, as it's redundant to say that the
@@ -336,7 +336,7 @@ class MatcherBase : private MatcherDescriberInterface {
     // Returns the captured object if it implements the interface, otherwise
     // returns the MatcherBase itself.
     const MatcherDescriberInterface* (*get_describer)(const MatcherBase&);
-    // Called on shared instances when the reference count reaches 0.
+    // Called on shared instances when the reference countOfSymbols reaches 0.
     void (*shared_destroy)(SharedPayloadBase*);
   };
 

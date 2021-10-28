@@ -111,7 +111,7 @@ GTEST_API_ bool InDeathTestChild();
 //   death tests; though it lacks many features you can find in PCRE
 //   or POSIX extended regex syntax.  For example, we don't support
 //   union ("x|y"), grouping ("(xy)"), brackets ("[xy]"), and
-//   repetition count ("x{5,7}"), among others.
+//   repetition countOfSymbols ("x{5,7}"), among others.
 //
 //   Below is the syntax that we do support.  We chose it to be a
 //   subset of both PCRE and POSIX extended regex, so it's easy to

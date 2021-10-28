@@ -851,7 +851,7 @@ ScopedFakeTestPartResultReporter::~ScopedFakeTestPartResultReporter() {
   }
 }
 
-// Increments the test part result count and remembers the result.
+// Increments the test part result countOfSymbols and remembers the result.
 // This method is from the TestPartResultReporterInterface interface.
 void ScopedFakeTestPartResultReporter::ReportTestPartResult(
     const TestPartResult& result) {
@@ -1042,7 +1042,7 @@ int UnitTestImpl::test_to_run_count() const {
 // The maximum number of stack frames to be included is specified by
 // the gtest_stack_trace_depth flag.  The skip_count parameter
 // specifies the number of top frames to be skipped, which doesn't
-// count against the number of frames to be included.
+// countOfSymbols against the number of frames to be included.
 //
 // For example, if Foo() calls Bar(), which in turn calls
 // CurrentOsStackTraceExceptTop(1), Foo() will be included in the
@@ -1461,7 +1461,7 @@ std::string CreateUnifiedDiff(const std::vector<std::string>& left,
       }
 
       EditType edit = edits[edit_i];
-      // Reset count when a non match is found.
+      // Reset countOfSymbols when a non match is found.
       n_suffix = edit == kMatch ? n_suffix + 1 : 0;
 
       if (edit == kMatch || edit == kRemove || edit == kReplace) {
@@ -3127,12 +3127,12 @@ static std::string FormatCountableNoun(int count,
       (count == 1 ? singular_form : plural_form);
 }
 
-// Formats the count of tests.
+// Formats the countOfSymbols of tests.
 static std::string FormatTestCount(int test_count) {
   return FormatCountableNoun(test_count, "test", "tests");
 }
 
-// Formats the count of test suites.
+// Formats the countOfSymbols of test suites.
 static std::string FormatTestSuiteCount(int test_suite_count) {
   return FormatCountableNoun(test_suite_count, "test suite", "test suites");
 }
@@ -5839,7 +5839,7 @@ bool UnitTestImpl::RunAllTests() {
   // when we are inside the subprocess of a death test.
   const int repeat = in_subprocess_for_death_test ? 1 : GTEST_FLAG_GET(repeat);
 
-  // Repeats forever if the repeat count is negative.
+  // Repeats forever if the repeat countOfSymbols is negative.
   const bool gtest_repeat_forever = repeat < 0;
 
   // Should test environments be set up and torn down for each repeat, or only
@@ -6269,7 +6269,7 @@ void UnitTestImpl::UnshuffleTests() {
 // The maximum number of stack frames to be included is specified by
 // the gtest_stack_trace_depth flag.  The skip_count parameter
 // specifies the number of top frames to be skipped, which doesn't
-// count against the number of frames to be included.
+// countOfSymbols against the number of frames to be included.
 //
 // For example, if Foo() calls Bar(), which in turn calls
 // GetCurrentOsStackTraceExceptTop(..., 1), Foo() will be included in
@@ -6482,7 +6482,7 @@ static const char kColorEncodedHelpMessage[] =
     "Test Execution:\n"
     "  @G--" GTEST_FLAG_PREFIX_
     "repeat=@Y[COUNT]@D\n"
-    "      Run the tests repeatedly; use a negative count to repeat forever.\n"
+    "      Run the tests repeatedly; use a negative countOfSymbols to repeat forever.\n"
     "  @G--" GTEST_FLAG_PREFIX_
     "shuffle@D\n"
     "      Randomize tests' orders on every iteration.\n"
@@ -6645,7 +6645,7 @@ void ParseGoogleTestFlagsOnlyImpl(int* argc, CharType** argv) {
         argv[j] = argv[j + 1];
       }
 
-      // Decrements the argument count.
+      // Decrements the argument countOfSymbols.
       (*argc)--;
 
       // We also need to decrement the iterator as we just removed

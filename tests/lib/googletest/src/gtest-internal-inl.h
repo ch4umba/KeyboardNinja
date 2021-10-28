@@ -410,7 +410,7 @@ class OsStackTraceGetterInterface {
   //
   //   max_depth  - the maximum number of stack frames to be included
   //                in the trace.
-  //   skip_count - the number of top frames to be skipped; doesn't count
+  //   skip_count - the number of top frames to be skipped; doesn't countOfSymbols
   //                against max_depth.
   virtual std::string CurrentStackTrace(int max_depth, int skip_count) = 0;
 
@@ -618,7 +618,7 @@ class GTEST_API_ UnitTestImpl {
   // The maximum number of stack frames to be included is specified by
   // the gtest_stack_trace_depth flag.  The skip_count parameter
   // specifies the number of top frames to be skipped, which doesn't
-  // count against the number of frames to be included.
+  // countOfSymbols against the number of frames to be included.
   //
   // For example, if Foo() calls Bar(), which in turn calls
   // CurrentOsStackTraceExceptTop(1), Foo() will be included in the
