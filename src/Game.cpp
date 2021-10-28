@@ -76,6 +76,7 @@ void Game::start()
     clrscr();
     cout << "Press any key for start!";
     getch();
+    getch();
     clrscr();
 
     string text;
@@ -85,7 +86,7 @@ void Game::start()
     cout << text;
     double time = goPrint(text);
     int symbolsPerMinute = static_cast<int>(
-            (text.size() - (text.size() / countOfSymbols)) / time * 60);
+            (text.size() - (text.size() / texts.countOfSymbols)) / time * 60);
     setBGColor(0);
     setFGColor(7);
     clrscr();
@@ -163,6 +164,7 @@ void Game::menu()
             return;
         default:
             cout << "ERROR!";
+            cout << endl;
             sleep(1);
         }
     }
@@ -187,11 +189,13 @@ void Game::settings()
             } else {
                 cout << "ERROR!";
             }
+            cout << endl;
             sleep(1);
             break;
         case 2:
             texts.removeAllTexts();
             cout << "All texts are removed!";
+            cout << endl;
             sleep(1);
             break;
         case 3:
@@ -199,14 +203,16 @@ void Game::settings()
             cin >> tmp;
             if (tmp < 20 || tmp > 120) {
                 cout << "ERROR!";
+                cout << endl;
                 sleep(1);
                 break;
             }
-            countOfSymbols = tmp;
+            texts.countOfSymbols = tmp;
             break;
         case 4:
             return;
         default:
+            cout << endl;
             cout << "ERROR!";
             sleep(1);
         }
@@ -215,7 +221,7 @@ void Game::settings()
 
 bool Game::comparator(pair<int, string>& a, pair<int, string>& b)
 {
-    return a.first < b.first;
+    return a.first > b.first;
 }
 
 void Game::addResult(int& symbolsPerMinute)
@@ -226,6 +232,7 @@ void Game::addResult(int& symbolsPerMinute)
     if (choice == 'Y') {
         string name;
         cout << "Your Name:";
+        cin.get();
         getline(cin, name);
         if (results.size() < 10) {
             results.emplace_back(symbolsPerMinute, name);
@@ -252,9 +259,9 @@ void Game::showRecords()
 
 void Game::saveRecordsInFile()
 {
-    ofstream fout("records.dat", ios_base::app);
+    ofstream fout("records.dat");
     if (fout.good()) {
-        for (int i = 0; i < results.size(); i++) {
+        for (int i = 0; i < 10; i++) {
             fout << results[i].first << "\t\t\t" << results[i].second << endl;
         }
     }

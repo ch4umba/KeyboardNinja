@@ -11,18 +11,20 @@
 
 using namespace std;
 
-static int countOfSymbols = 30;
 
 class Texts {
 private:
     vector<string> text;
 
 public:
+    int countOfSymbols = 30;
+
     Texts();
     Texts(const string&);
     bool addText(const string&);
     void setTextToWrite(string&);
     void removeAllTexts();
+    void repairText();
 };
 
 #endif // KEYBOARDNINJA_TEXTS_H

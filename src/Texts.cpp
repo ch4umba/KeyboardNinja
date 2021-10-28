@@ -54,3 +54,14 @@ void Texts::removeAllTexts()
 {
     text.clear();
 }
+
+void Texts::repairText()
+{
+    for (int i = 0; i < text.size(); i++) {
+        for (int j = 0; j < text[i].size(); j++) {
+            if (text[i][j] == '\n') {
+                text[i].erase(j, 1);
+            }
+        }
+    }
+}
